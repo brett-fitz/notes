@@ -1,0 +1,19 @@
+site_name: notes.brettfitz.me
+repo_url: https://github.com/brett-fitz/notes
+pages:
+  - Home: 'index.md'
+  - Guides: 'guides.md'
+  - How-Tos: 'how-tos.md'
+  - Notes: 'notes.md'
+
+nav:
+  - Home: 'index.md'
+  - Guides: 'guides.md'
+  - How-Tos: 'how-tos.md'
+  - Notes: 'notes.md'
+  - Blog: https://brettfitz.me/
+
+theme: cyborg
+
+markdown_extensions:
+  - pymdownx.superfences
