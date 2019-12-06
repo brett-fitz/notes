@@ -1,11 +1,16 @@
-# Guides, How-Tos, Notes, etc.
-@_brettfitz - colllection of my notes from overtime.
+# Guides, How-Tos, Notes
+@_brettfitz - collection of notes from over time
 
 
 ### Navigation
 ```
-|
- \ Guides
- \ How-Tos
- \ Notes
+| 
+ \ 
+|  Home
+ \ 
+|  Guides - Full walkthroughs
+ \ 
+|  How-Tos - Installations, Integrations, Tasks 
+ \ 
+   Notes - Tech Notes
 ```
