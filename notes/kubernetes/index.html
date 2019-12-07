@@ -7,11 +7,11 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>How-Tos - notes.brettfitz.me</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Kubernetes - notes.brettfitz.me</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">notes.brettfitz.me</a>
+                    <a class="navbar-brand" href="../..">notes.brettfitz.me</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,16 +47,16 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="..">Home</a>
+                                <a href="../..">Home</a>
                             </li>
                             <li >
-                                <a href="../guides/">Guides</a>
-                            </li>
-                            <li class="active">
-                                <a href="./">How-Tos</a>
+                                <a href="../../guides/">Guides</a>
                             </li>
                             <li >
-                                <a href="../notes/">Notes</a>
+                                <a href="../../how-tos/">How-Tos</a>
+                            </li>
+                            <li >
+                                <a href="../">Notes</a>
                             </li>
                             <li >
                                 <a href="https://brettfitz.me/">Blog</a>
@@ -69,18 +69,8 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../guides/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../notes/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                             <li>
-                                <a href="https://github.com/brett-fitz/notes/edit/master/docs/how-tos.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/brett-fitz/notes/edit/master/docs/notes/kubernetes.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -90,16 +80,54 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#how-tos">How-Tos</a></li>
-            <li><a href="#docker-phantom-splunk">docker-phantom-splunk</a></li>
+        <li class="main active"><a href="#kubernetes">Kubernetes</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#tools">Tools</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="how-tos">How-Tos</h2>
-<h3 id="docker-phantom-splunk">docker-phantom-splunk</h3>
-<p>https://github.com/brett-fitz/docker-splunk-phantom/blob/master/README.md</p>
-<p>soon...</p></div>
+<h2 id="kubernetes">Kubernetes</h2>
+<h3 id="documentation">Documentation</h3>
+<h3 id="tools">Tools</h3>
+<h4 id="kube-forwarder">Kube Forwarder</h4>
+<p>Multicluster easy to use Kubernetes port forwarding manager
+source: https://github.com/pixel-point/kube-forwarder</p>
+<p><em>Install with Homebrew (macOS)</em>
+<pre class="highlight"><code>brew cask install kube-forwarder</code></pre></p>
+<p><em>Install from repo</em>
+<pre class="highlight"><code># Clone source code
+git clone git@github.com:pixel-point/kube-forwarder.git
+
+# install dependencies
+npm install
+
+# prepare .env files
+cp .env.example .env
+cp .env.example .env.production
+
+# serve with hot reload in Electron Dev app
+npm run dev
+
+# serve WEB version with hot reload at localhost:9081
+npm run web</code></pre></p>
+<p><em>Build</em>
+<pre class="highlight"><code># Build a target for current OS
+npm run build
+
+# Build a target for Windows
+npm run build -- -- --win
+
+# Build a target for Linux
+npm run build -- -- --linux
+
+# You can mix targets
+npm run build -- -- --win --linux
+
+# You can build static and target separately
+npm run build:dist
+npm run build:target -- --win</code></pre>
+A built version will be appear in <code>build</code> directory.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -107,11 +135,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
